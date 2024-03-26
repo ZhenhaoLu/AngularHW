@@ -1,0 +1,26 @@
+<p>todo-details works!</p>
+<h4>Todo Details</h4>
+<ul>
+@for(todo of data; track todo; let i = $index){
+<li (click)="selectTodo(i)">
+<div>
+  <label><strong>UserId:</strong></label>
+  {{ todo.userId }}
+</div>
+<div>
+  <label><strong>Id:</strong></label>
+  {{ todo.id }}
+</div>
+<div>
+  <label><strong>Title:</strong></label> {{ todo.title }}
+</div>
+<div>
+  <label><strong>Complete:</strong></label>
+  {{ todo.completed? 'Completed': 'Uncompleted'}}
+</div>
+</li>}
+</ul>
+<button (click)="deleteRequest()">Delete This Todo</button>
+<!--@if(selectedTodo.id > -1){-->
+
+<!--}-->

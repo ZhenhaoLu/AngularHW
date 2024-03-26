@@ -1,0 +1,7 @@
+<p>todo-list works!</p>
+<input type="text" [(ngModel)]="searchId"><button (click)="searchById()">Search</button>
+<ul>
+@for (todoTitle of showData; track todoTitle){
+  <li>{{todoTitle.title | truncate:10}}</li>
+}
+</ul>
